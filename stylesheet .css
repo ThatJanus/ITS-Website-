@@ -20,6 +20,8 @@
     top: 0;
   }
 .logo-img{
+  float: left;
+  margin: 0px 0px 0px;
 }
 .sc {
   top:0px;
@@ -61,16 +63,10 @@
 position: relative;
   top: 650px;
 }
-#main {
+.main {
   transition: margin-left .5s;
   padding: 16px;
 }
-
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
-.container {
-  display: inline-block;
-  cursor: pointer;
+.navbar-custom {
+  height: 85px;
 }
