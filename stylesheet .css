@@ -59,6 +59,7 @@
   -webkit-animation-delay: -5s;
 }
 .container2 {
+  font-family: 'Cabin', sans-serif;
   height:200px;
 position: relative;
   top: 650px;
@@ -68,5 +69,15 @@ position: relative;
   padding: 16px;
 }
 .navbar-custom {
-  height: 85px;
+  font-family: 'Cabin', sans-serif;
+  height: 65px;
+}
+.navbar-custom>li {
+  display: inline-block;
+}
+@media (min-width:992px){
+  .navbar li {
+    margin-left : 2em;
+    margin-right : 2em;
+  }
 }
