@@ -61,7 +61,7 @@
 .container2 {
   font-family: 'Cabin', sans-serif;
   height:200px;
-position: relative;
+  position: relative;
   top: 650px;
 }
 .main {
@@ -81,4 +81,18 @@ position: relative;
     margin-left : 2em;
     margin-right : 2em;
   }
+}
+@-webkit-keyframes linkfade {
+  0% {text-decoration-color:white}
+  100% {text-decoration-color:gray}
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link:hover{
+  text-decoration: none;
+  color:gray;
+  -webkit-animation-name: linkfade;
+  -webkit-animation-duration: 1s;
 }
