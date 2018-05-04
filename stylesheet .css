@@ -91,6 +91,14 @@
   text-decoration: none;
   color: white;
 }
+.icon {
+  text-decoration: none;
+  color: white;
+}
+.icon:hover {
+  text-decoration: none;
+  color: white; 
+}
 .link:hover{
   text-decoration: none;
   color: white;
@@ -142,3 +150,4 @@
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
