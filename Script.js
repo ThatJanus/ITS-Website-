@@ -35,12 +35,22 @@ $(document).ready(function() {
         $('.opaque-navbar').removeClass('opaque');
     }
 });
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "navbar-custom") {
-      x.className += "responsive";
-  } else {
-      x.className = "navbar-custom";
-  }
+$(document).ready(function(){
+	$('#nav-icon3').click(function(clickEvent){
+    $(this).toggleClass('open')
+	});
+});
+function clickEvent() {
+  openNav();
+  closeNav();
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
 }
