@@ -245,3 +245,24 @@
     text-align: left;
   }
 }
+.imagetext{
+  position: absolute;
+  color: white;
+  top:0;
+  z-index: -1;
+  padding-top:80px;
+  padding-left:40px;
+  z-index: -1;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 15s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+}
+.two2 {
+  -webkit-animation-delay: -10s;
+}
+.three3 {
+  -webkit-animation-delay: -5s;
+}
