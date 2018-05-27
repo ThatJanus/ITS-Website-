@@ -1,12 +1,18 @@
 
-.opaque-navbar { 
+#index .opaque-navbar { 
   background-color: rgba(0, 0, 0, 0);
   Transition: background-color .5s ease-out 0s;
 }
-.opaque-navbar.opaque {
+#index .opaque-navbar.opaque {
   background-color: #17244F;
   Transition:background-color .5s ease-out 0s; 
 }
+#pp .navbar-custom {
+background-color: #17244F;
+font-family: 'Cabin', sans-serif;
+font-size: 20px;
+height: 65px;
+} 
 .sticky.navbar {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -68,7 +74,7 @@
   transition: margin-left .5s;
   padding: 16px;
 }
-.navbar-custom {
+#index .navbar-custom {
   font-family: 'Cabin', sans-serif;
   font-size: 20px;
   height: 65px;
