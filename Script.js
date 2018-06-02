@@ -1,53 +1,62 @@
-$(document).ready(function() {
+// Java Script Below handles the toggling of classes during the home screen animation & specifying which of the nav items should go at differnet times
+$('.open-overlay').click(function() {
+    var overlay_navigation = $('.overlay-navigation'),
+      nav_item_1 = $('nav li:nth-of-type(1)'),
+      nav_item_2 = $('nav li:nth-of-type(2)'),
+      nav_item_3 = $('nav li:nth-of-type(3)'),
+      nav_item_4 = $('nav li:nth-of-type(4)'),
+      nav_item_5 = $('nav li:nth-of-type(5)'),
+      top_bar = $('.bar-top'),
+      middle_bar = $('.bar-middle'),
+      bottom_bar = $('.bar-bottom');
+  
+    overlay_navigation.toggleClass('overlay-active');
+    if (overlay_navigation.hasClass('overlay-active')) {
+  
+      top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+      middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+      bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+      overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+      nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+      nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+      nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+      nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+      nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+    } else {
+      top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+      middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+      bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+      overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+      nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+      nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+      nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+      nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+      nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+    }
+  })
 
-    var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
-      var stickyHeight = sticky.outerHeight();
-      var stickyTop = stickyWrapper.offset().top;
-      if (scrollElement.scrollTop() >= stickyTop){
-        stickyWrapper.height(stickyHeight);
-        sticky.addClass("is-sticky");
-      }
-      else{
-        sticky.removeClass("is-sticky");
-        stickyWrapper.height('auto');
-      }
-    };
-    
-    $('[data-toggle="sticky-onscroll"]').each(function() {
-      var sticky = $(this);
-      var stickyWrapper = $('<div>').addClass('sticky-wrapper'); 
-      sticky.before(stickyWrapper);
-      sticky.addClass('sticky');
-      
-      $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
-        stickyToggle(sticky, stickyWrapper, $(this));
-      });
-      
-      stickyToggle(sticky, stickyWrapper, $(window));
+  $().ready(function(){
+    $('#page2').load('page2.html #page');
+  });
+
+  $().ready(function(){
+    $('#page2-link').on('click',function(){
+         $('#page').html( $('#page').html() ); //this will replace html content
     });
   });
 
-  $(window).scroll(function() {
-    if($(this).scrollTop() > 50)  
-    {
-        $('.opaque-navbar').addClass('opaque');
-    } else {
-        $('.opaque-navbar').removeClass('opaque');
-    }
-});
-$(document).ready(function(){
-	$('#nav-icon3').click(function(clickEvent){
-    $(this).toggleClass('open')
-	});
-});
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "example") {
-      x.className += "responsive";
-  } else {
-      x.className = "example";
-  }
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 500 );
 }
 
+$(function(){
+	$("#page2-link").click(function(){
+			$(".box1").addClass("home-active");
+  }
+  );})
 
-
+  $(function(){
+    $("#page2-link").click(function(){
+        $(".text2").addClass("text2-active");
+    }
+    );})
